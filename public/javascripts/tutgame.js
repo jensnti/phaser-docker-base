@@ -183,5 +183,7 @@ function hitBomb (player, bomb)
 
   player.anims.play('turn');
 
+  postScore(score);
+
   gameOver = true;
 }
