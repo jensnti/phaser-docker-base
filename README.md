@@ -10,6 +10,10 @@ git clone https://github.com/jensnti/phaser-docker-base MAPPNAMN
 cd MAPPNAMN
 
 rm -rf .git
+
+npm install
+
+cp .env-example .env
 ```
 Skapa repo på [GitHub](https://github.com)
 
