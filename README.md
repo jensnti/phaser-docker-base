@@ -2,7 +2,7 @@
 
 ## Setup av miljön
 
-Installera ( Docker )[https://www.docker.com/]
+Installera (Docker)[https://www.docker.com/]
 
 ```bash
 git clone https://github.com/jensnti/phaser-docker-base MAPPNAMN
@@ -50,7 +50,7 @@ FLUSH PRIVILEGES;
 
 Kör igenom följande tutorial.
 
-https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
+(Making your first phaser 3 game)[https://phaser.io/tutorials/making-your-first-phaser-3-game/part1]
 
 Koden från det sista steget finns i tutgame.js och laddas från game routern.
 
@@ -63,7 +63,7 @@ Tabellen hiscore sparar score och datum.
 
 Vi använder Axios för att kunna göra en request från sidan utan att ladda om den.
 
-hiscore.js innehåller koden som använder (Axios)[(]https://github.com/axios/axios] för att posta score data till POST routen /game/score.
+hiscore.js innehåller koden som använder (Axios)[https://github.com/axios/axios] för att posta score data till POST routen /game/score.
 ```javascript
 const instance = axios.create({
   baseURL: 'http://localhost:3000',
