@@ -52,14 +52,40 @@ Kör igenom följande tutorial.
 
 https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
 
-## Databas
+Koden från det sista steget finns i tutgame.js och laddas från game routern.
+
+## Databas för hiscore
 
 Databasmodellen kommer från tidigare projekt.
 Databasen finns som dumpad som hiscore.sql, använd tableplus för att importera eller kör genom docker.
 
+Tabellen hiscore sparar score och datum.
 
+hiscore.js innehåller koden som använder (Axios)[(]https://github.com/axios/axios] för att posta score data till POST routen /game/score.
+Vi använder Axios för att kunna göra en request från sidan utan att ladda om den.
 
+Ändringen i tutgame.js sker i hitbomb metoden där spelet avslutas
+```javascript
+  postScore(score);
+```
 
+```javascript
+const instance = axios.create({
+  baseURL: 'http://localhost:3000',
+});
+
+function postScore(score) {
+  instance.post('/game/score', {
+    score: score
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+      console.log(error);
+  });
+} 
+```
 
 http://free-tex-packer.com/app/
 

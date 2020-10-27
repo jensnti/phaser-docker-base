@@ -7,7 +7,7 @@ function postScore(score) {
     score: score
   })
   .then(function (response) {
-    console.log(response);
+    console.log(response.data.msg);
   })
   .catch(function (error) {
       console.log(error);
