@@ -1,0 +1,48 @@
+version: "3"
+services:
+  node:
+    container_name: nodedev
+    image: "node:12"
+    user: "node"
+    working_dir: /var/www
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/var/www
+    ports:
+    - ${port:-3000}:3000
+    # expose:
+    #   - "3000"
+    command: "npm start"
+    networks:
+      - node-net
+
+  #MySQL Service
+  db:
+    image: mysql:8.0.22
+    container_name: nodedb
+    restart: unless-stopped
+    tty: true
+    command:
+      '--character-set-server=utf8mb4'
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: game
+      MYSQL_ROOT_PASSWORD: password123
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - node-net
+
+#Docker Networks
+networks:
+  node-net:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local
