@@ -61,14 +61,9 @@ Databasen finns som dumpad som hiscore.sql, använd tableplus för att importera
 
 Tabellen hiscore sparar score och datum.
 
-hiscore.js innehåller koden som använder (Axios)[(]https://github.com/axios/axios] för att posta score data till POST routen /game/score.
 Vi använder Axios för att kunna göra en request från sidan utan att ladda om den.
 
-Ändringen i tutgame.js sker i hitbomb metoden där spelet avslutas
-```javascript
-  postScore(score);
-```
-
+hiscore.js innehåller koden som använder (Axios)[(]https://github.com/axios/axios] för att posta score data till POST routen /game/score.
 ```javascript
 const instance = axios.create({
   baseURL: 'http://localhost:3000',
@@ -85,6 +80,10 @@ function postScore(score) {
       console.log(error);
   });
 } 
+```
+Ändringen i tutgame.js sker i hitbomb metoden där spelet avslutas
+```javascript
+postScore(score);
 ```
 
 http://free-tex-packer.com/app/
