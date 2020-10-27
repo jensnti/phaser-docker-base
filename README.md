@@ -52,6 +52,11 @@ Kör igenom följande tutorial.
 
 https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
 
+## Databas
+
+Databasmodellen kommer från tidigare projekt.
+Databasen finns som dumpad som hiscore.sql, använd tableplus för att importera eller kör genom docker.
+
 
 
 
