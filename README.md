@@ -1,6 +1,11 @@
 # phaser-docker-base
 
-För att INTE inkludera en databas image, använd denna branch. https://github.com/jensnti/phaser-docker-base/tree/nodb
+För att INTE inkludera en databas image, använd [nodb](https://github.com/jensnti/phaser-docker-base/tree/nodb) branchen.
+
+Clone kommandot ska då använda den branchen.
+```
+git clone -b nodb https://github.com/jensnti/phaser-docker-base
+```
 
 ## Setup av miljön
 
