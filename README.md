@@ -1,5 +1,7 @@
 # phaser-docker-base
 
+För att INTE inkludera en databas image, använd denna branch. https://github.com/jensnti/phaser-docker-base/tree/nodb
+
 ## Setup av miljön
 
 Installera [Docker](https://www.docker.com/)
