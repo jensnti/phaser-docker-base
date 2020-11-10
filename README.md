@@ -34,21 +34,8 @@ docker-compose up -d --build
 docker ps
 ```
 
-Fixa databasen, genom att köra bash och mysql på imagen.
-```
-docker-compose exec db bash
-
-mysql -u root -p
-```
-
-SQL att köra.
-
-```sql
-CREATE USER 'gameuser'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON game.* TO 'gameuser'@'%';
-ALTER USER 'gameuser'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
-FLUSH PRIVILEGES;
-```
+I den här versionen hoppar vi docker imagen för databas.
+Kör den DB installation ni har eller skolserver.
 
 ## Phaser tutorial
 
