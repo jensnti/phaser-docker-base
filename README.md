@@ -7,7 +7,7 @@
 Installera [Docker](https://www.docker.com/)
 
 ```bash
-git clone https://github.com/jensnti/phaser-docker-base MAPPNAMN
+ git clone -b nodb https://github.com/jensnti/phaser-docker-base
 
 cd MAPPNAMN
 
