@@ -2,6 +2,8 @@
 
 ## Setup av miljön
 
+[Kontrollera](https://docs.microsoft.com/en-us/windows/wsl/install-win10) att du har WSL2. 
+
 Installera [Docker](https://www.docker.com/)
 
 ```bash
@@ -34,8 +36,9 @@ docker-compose up -d --build
 docker ps
 ```
 
-I den här versionen hoppar vi docker imagen för databas.
-Kör den DB installation ni har eller skolserver.
+**I den här versionen hoppar vi docker imagen för databas.**
+
+**Kör den DB installation ni har eller skolserver.**
 
 ## Phaser tutorial
 
