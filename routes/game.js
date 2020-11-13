@@ -27,16 +27,17 @@ router.get('/score', async function(req, res, next) {
 
 /* Route for posting hiscore */
 router.post('/score', async function(req, res, next) {
-  const sql = "INSERT INTO hiscore (score) VALUES (?)";
+  const sql = "INSERT INTO hiscore (score, name) VALUES (?, ?)";
 
   const score = parseInt(req.body.score);
+  const name = req.body.name;
 
   try {
-    await query(sql, score);
+    await query(sql, score, name);
     
     res.json({
       status: 200,
-      msg: 'Score of ' + score + ' posted.'
+      msg: name + ' score of ' + score + ' posted.'
     });
   }
   catch(e) {

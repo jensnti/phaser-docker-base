@@ -183,7 +183,9 @@ function hitBomb (player, bomb)
 
   player.anims.play('turn');
 
-  postScore(score);
+  let name = prompt('Skriv dina initialer: ');
+
+  postScore(score, name);
 
   gameOver = true;
 }
